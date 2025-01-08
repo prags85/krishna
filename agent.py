@@ -11,7 +11,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 import google.generativeai as genai
 
 # Initialize the document loader
-file_path = "/Users/jaydaksharora/Downloads/SRB-2023-24_compressed.pdf"
+file_path = "/SRB_MPSTME_2024-25_sswFVjxQKq.pdf"
 loader = PyPDFLoader(file_path)
 docs = loader.load()
 
