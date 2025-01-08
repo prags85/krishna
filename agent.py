@@ -3,7 +3,7 @@ from langchain_groq import ChatGroq
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
-from utils import get_session_id
+
 import os
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_chroma import Chroma
@@ -70,7 +70,6 @@ def generate_response(user_input):
     """
 
     response = rag_chain.invoke(
-        {"input": user_input},
-        {"configurable": {"session_id": get_session_id()}},)
+        {"input": user_input})
 
     return response['answer']
